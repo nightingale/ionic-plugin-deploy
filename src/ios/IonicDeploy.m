@@ -283,8 +283,8 @@ typedef struct JsonHttpResponse {
             NSString *query = [NSString stringWithFormat:@"cordova_js_bootstrap_resource=%@", self.cordova_js_resource];
             
             NSURLComponents *components = [NSURLComponents new];
-            components.scheme = @"file";
-            components.path = [NSString stringWithFormat:@"%@/%@/index.html", libraryDirectory, uuid];
+            components.scheme = @"http";
+            components.path = [NSString stringWithFormat:@"%@/%@/index.html", @"/localhost:12344/Library/Application Support", uuid];
             components.query = query;
 
             self.currentUUID = uuid;
