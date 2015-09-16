@@ -280,7 +280,7 @@ typedef struct JsonHttpResponse {
             NSString *libraryDirectory = [paths objectAtIndex:0];
 
 
-            NSString *query = [NSString stringWithFormat:@"cordova_js_bootstrap_resource=%@", self.cordova_js_resource];
+            NSString *query = [NSString stringWithFormat:@"cordova_js_bootstrap_resource=%@", @"http:/localhost:12344/cordova.js"];
             
             NSURLComponents *components = [NSURLComponents new];
             components.scheme = @"http";
